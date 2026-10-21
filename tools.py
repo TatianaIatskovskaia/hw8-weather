@@ -1,7 +1,8 @@
 import requests
+import os
 
 URL = 'http://api.weatherapi.com/v1/current.json'
-API_KEY = '75182eac43e1475a9b2115113261710'
+API_KEY = os.environ.get("API_KEY")
 
 if not API_KEY:
     raise RuntimeError("API_KEY is not set")
